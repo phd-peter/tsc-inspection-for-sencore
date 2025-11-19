@@ -1,0 +1,8 @@
+## ifc를 띄우는
+https://www.npmjs.com/package/web-ifc
+https://github.com/ThatOpen/engine_web-ifc
+
+
+
+## 3d 모델만드는
+https://github.com/ThatOpen/engine_components

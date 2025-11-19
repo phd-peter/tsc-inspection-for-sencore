@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IFC Viewer - 3D 모델 뷰어</title>
+    <style>
+      html, body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      }
+      #container {
+        width: 100vw;
+        height: 100vh;
+        cursor: grab;
+      }
+      #container:active {
+        cursor: grabbing;
+      }
+      /* 로딩 인디케이터 */
+      .loading-indicator {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2000;
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+        color: white;
+        font-size: 18px;
+      }
+      .loading-indicator.active {
+        display: flex;
+      }
+      .spinner {
+        width: 50px;
+        height: 50px;
+        border: 4px solid rgba(255, 255, 255, 0.3);
+        border-top: 4px solid white;
+        border-radius: 50%;
+        animation: spin 1s linear infinite;
+      }
+      @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="container"></div>
+    <div class="loading-indicator" id="loadingIndicator">
+      <div class="spinner"></div>
+      <div>IFC 파일 로딩 중...</div>
+    </div>
+    <script type="module" src="/main.ts"></script>
+  </body>
+</html>
+
