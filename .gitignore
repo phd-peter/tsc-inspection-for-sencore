@@ -1,21 +1,47 @@
 # Dependencies
 node_modules/
-package-lock.json
+.pnp
+.pnp.js
 
-# Build outputs
+# Testing
+coverage/
+
+# Production builds
 dist/
 build/
-*.tsbuildinfo
-examples/
+frontend/dist/
+frontend/build/
+
+# Backend (local only - not uploaded to GitHub)
+backend-a/
+backend-b/
+
+# Backend deployment scripts (optional - remove if you want to ignore)
+# install-services.ps1
+# manage-services.ps1
+# check-tunnel.ps1
+
+# Backend deployment guides (optional - remove if you want to ignore)
+# CLOUDFLARE_SETUP.md
+# DEPLOYMENT.md
 
 # Environment variables
 .env
 .env.local
-.env.*.local
+.env.development.local
+.env.test.local
+.env.production.local
 
-# IDE
-.vscode/
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Editor
 .idea/
+.vscode/
 *.swp
 *.swo
 *~
@@ -24,13 +50,8 @@ examples/
 .DS_Store
 Thumbs.db
 
-# Logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# Cloudflare Tunnel credentials (보안)
+.cloudflared/*.json
 
-# Temporary files
-*.tmp
-.cache/
-
+# IFC files (large)
+*.ifc
