@@ -1,5 +1,5 @@
 // IFC Viewer - examples/viewer 패턴 기반 구현
-import { initIFCViewer } from "./ifc-viewer";
+import { initIFCViewer } from "./ifc-viewer-assembly";
 
 const container = document.getElementById("container");
 if (!container) {

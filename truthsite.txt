@@ -6,3 +6,8 @@ https://github.com/ThatOpen/engine_web-ifc
 
 ## 3d 모델만드는
 https://github.com/ThatOpen/engine_components
+
+
+## ifc파일
+tekla assembly
+assembly/Cast unit Mark: 2TG046
