@@ -36,6 +36,15 @@ A modern web application for viewing and interacting with 3D models using `@that
 - Windows 서비스 등록 및 관리
 - Frontend 배포 프로세스
 
+## Cloudflare 설정
+
+현재 운영 환경의 Cloudflare 설정은 [CLOUDFLARE_SETUP.md](./docs/CLOUDFLARE_SETUP.md)를 참조하세요.
+
+- Cloudflare Pages 설정 (프론트엔드)
+- Cloudflare Tunnel 설정 (백엔드)
+- Cloudflare Access 설정 (인증)
+- CORS 설정 및 보안 상태
+
 ## Installation
 
 1. Clone the repository:
