@@ -364,7 +364,9 @@ function deserializeGeometry(geomData: GeometryData): THREE.BufferGeometry {
 
 // Assembly 목록 가져오기
 async function fetchAssemblies(): Promise<AssemblyInfo[]> {
-  const response = await fetch(`${API_BASE_URL}/assemblies`);
+  const response = await fetch(`${API_BASE_URL}/assemblies`, {
+    credentials: "include",  // access token 포함
+  });
   if (!response.ok) {
     throw new Error(`Failed to fetch assemblies: ${response.statusText}`);
   }
@@ -375,6 +377,7 @@ async function fetchAssemblies(): Promise<AssemblyInfo[]> {
 async function fetchAssemblyGeometry(tag: string): Promise<AssemblyGeometryResponse> {
   const response = await fetch(`${API_BASE_URL}/assembly-geometry`, {
     method: "POST",
+    credentials: "include",  // access token 포함
     headers: {
       "Content-Type": "application/json",
     },

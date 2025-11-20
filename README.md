@@ -28,6 +28,14 @@ A modern web application for viewing and interacting with 3D models using `@that
 - Node.js 18+ 
 - npm or yarn
 
+## 운영 및 유지관리
+
+일상적인 운영 및 유지관리는 [OPERATIONS.md](./OPERATIONS.md)를 참조하세요.
+
+- Backend 서비스 구동 방법
+- Windows 서비스 등록 및 관리
+- Frontend 배포 프로세스
+
 ## Installation
 
 1. Clone the repository:
